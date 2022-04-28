@@ -1,4 +1,5 @@
 .env
+jwt.md
 
 # compiled output
 /dist

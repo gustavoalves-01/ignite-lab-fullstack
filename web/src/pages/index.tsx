@@ -1,4 +1,4 @@
-import { getSession, useUser } from '@auth0/nextjs-auth0';
+import { getAccessToken, getSession, useUser } from '@auth0/nextjs-auth0';
 import type { GetServerSideProps, NextPage } from 'next';
 
 const Home: NextPage = () => {
@@ -8,7 +8,10 @@ const Home: NextPage = () => {
 export default Home;
 
 export const getServerSideProps: GetServerSideProps = async ({ req, res }) => {
+  const token = getAccessToken(req, res);
   const session = getSession(req, res);
+
+  console.log(token);
 
   if (!session) {
     return {

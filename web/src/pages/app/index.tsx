@@ -1,4 +1,4 @@
-import { getSession, useUser, withPageAuthRequired } from '@auth0/nextjs-auth0';
+import { useUser, withPageAuthRequired } from '@auth0/nextjs-auth0';
 import { GetServerSideProps, NextPage } from 'next';
 import React from 'react';
 
